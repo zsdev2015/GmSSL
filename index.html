@@ -53,19 +53,6 @@ $ gmssl pkcs7 -print_certs -in certs/sm2/sm2-pkcs7.pem
 
 <p>GmSSL新增的EVP对象包括<code>EVP_sm3()</code>、<code>EVP_sm4_ecb()</code>、<code>EVP_sm4_cbc()</code>、<code>EVP_sm4_ofb()</code>、<code>EVP_sm4_cfb()</code>和<code>EVP_zuc()</code>。</p>
 
-<h2>
-<a id="注意事项" class="anchor" href="#%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9" aria-hidden="true"><span class="octicon octicon-link"></span></a>注意事项</h2>
-
-<h3>
-<a id="sm2签名中的摘要生成" class="anchor" href="#sm2%E7%AD%BE%E5%90%8D%E4%B8%AD%E7%9A%84%E6%91%98%E8%A6%81%E7%94%9F%E6%88%90" aria-hidden="true"><span class="octicon octicon-link"></span></a>SM2签名中的摘要生成</h3>
-
-<p>SM2数字签名方案中被签名的杂凑值不仅仅是消息的杂凑值，而是签名者身份信息串联上消息的杂凑值，其中签名者身份信息是签名者的可辨别标识字串、椭圆曲线方程系数、生成元和签名者公钥串联后字串的杂凑值。SM2标准中并未说明签名者的可辨别标识字串格式及获得方式，应用可以采用X.509证书中的Subject字段、CN (CommonName)或自行规定。</p>
-
-<h3>
-<a id="sm2参数选择" class="anchor" href="#sm2%E5%8F%82%E6%95%B0%E9%80%89%E6%8B%A9" aria-hidden="true"><span class="octicon octicon-link"></span></a>SM2参数选择</h3>
-
-<p>SM2标准中规定采用256比特的椭圆曲线域参数，并采用256比特的密码杂凑算法，并规定某些步骤中须采用SM3。GmSSL的实现支持灵活的参数设定，并支持内置的所有密码杂凑算法，因此应用可以选择安全程度更高的椭圆曲线域参数和密码杂凑算法，如521比特的域参数和SHA-512算法。</p>
-
       <footer class="site-footer">
         <span class="site-footer-owner"><a href="https://github.com/guanzhi/GmSSL">GmSSL</a> is maintained by <a href="https://github.com/guanzhi">guanzhi</a>.</span>
 
