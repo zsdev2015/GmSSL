@@ -2,43 +2,114 @@
 <html lang="en-us">
   <head>
     <meta charset="UTF-8">
+      <style class="anchorjs"></style>
     <title>GmSSL by guanzhi</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
-    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+  
+     
+ 
+   <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+      <link href="http://v3.bootcss.com/assets/css/patch.css" rel="stylesheet">
+   <!-- Documentation extras -->
+   <link href="css/docs.min.css" rel="stylesheet">
+<script src="./demonew_files/jquery.min.js"></script>
+
+
+  <script src="./demonew_files/bootstrap.min.js"></script>
+
+
+
+  <script src="./demonew_files/docs.min.js"></script>
+
+      
   </head>
+    
   <body>
-    <section class="page-header">
-      <h1 class="project-name">GmSSL</h1>
-      <h2 class="project-tagline">支持国密SM2、SM3、SM4算法的OpenSSL分支</h2>
-      <a href="https://github.com/guanzhi/GmSSL" class="btn">View on GitHub</a>
-      <a href="https://github.com/guanzhi/GmSSL/zipball/master" class="btn">Download .zip</a>
-      <a href="https://github.com/guanzhi/GmSSL/tarball/master" class="btn">Download .tar.gz</a>
-    </section>
+ 
 
-    <section class="main-content">
-      <h1>
-<a id="gmssl" class="anchor" href="#gmssl" aria-hidden="true"><span class="octicon octicon-link"></span></a>GmSSL</h1>
+    <div class=" bs-docs-masthead"  id="content" tabindex="-1">
+      <div class="container">
+          
+                <div class="center-block">
+                   <h1 class="text-center" style="color:white;text-shadow: gray 4px 2px 2px;">GmSSL</h1> 
+                </div> 
+	    <h2 class="text-center" style="color:white;text-shadow: gray 4px 2px 2px;">支持国密SM2、SM3、SM4算法的OpenSSL分支</h1>
+		
+		<p>
+        <a href="https://github.com/guanzhi/GmSSL" class="btn btn-lg btn-outline" style="text-shadow: white 2px 1px 1px;">
+		<span class="glyphicon glyphicon-cloud-upload"></span>View on GitHub</a>
+      </p>
+      </div>
+    </div>
+     
+    <div class="container bs-docs-container">
 
-<p>GmSSL (<a href="http://gmssl.org">http://gmssl.org</a>) 是支持国密算法和标准的OpenSSL分支，增加了对国密SM2/SM3/SM4算法和ECIES、CPK、ZUC算法的支持，实现了这些算法与EVP API和命令行工具的集成。GmSSL由<a href="http://infosec.pku.edu.cn">北京大学信息安全实验室</a>开发和维护。</p>
+        <div class="row">
+            <div class="col-md-9" role="main">
+                 <div class="bs-docs-section">
+                    <h1 id="advantages" class="page-header">特点</h1>
+                <div class="row featured ">
+                    <div class="col-md-4 feature text-center">
+                        <div class="row ">
+                            <img src="img/1445499019_Shield.png" class="img-thumbnail center-block" >
+                        </div>
+                        <div class="feature-inner ">
+                            <h3>支持多种加密算法</h3>
+                            <p></p>
+                    </div>
+                    </div>   
+                    <div class="col-md-4 feature text-center">
+                
+                        <div class="row ">
+                        <img src="img/1443013174_services.png" class="img-thumbnail center-block" >
+                        </div>
+                        <div class="feature-inner ">
+                        <h3>集成EVP API和命令行工具</h3>
+                        <p></p>
+                    </div>
+                    </div>     
+                    <div class="col-md-4 feature text-center">
+                        <div class="row ">
+                        <img src="img/1443330348_sports_mode.png" class="img-thumbnail center-block" >
+                        </div>
+                        <div class="feature-inner ">
+                            <h3>人性化设计，快捷方便</h3>
+                            <p></p>
+                        </div>
+                    </div>     
+                </div>
+                </div>
+                
+                <div class="bs-docs-section">
+                    <h1 id="download" class="page-header">下载</h1>
+                    <a href="https://github.com/guanzhi/GmSSL/zipball/master" class="btn">Download .zip</a>
+                    <a href="https://github.com/guanzhi/GmSSL/tarball/master" class="btn">Download .tar.gz</a>
+                </div>
+                <div class="bs-docs-section">
+                    <h1 id="configure" class="page-header">配置</h1>
+                    <p  >配置文档</p>
+                </div>
+                <div class="bs-docs-section">
+                    <h1 id="support" class="page-header">支持算法</h1>
+                    <div class="row">
+                        <h3>GmSSL的<code>libcrypto</code>密码库增加的密码算法包括：</h3>
+                    <ul>
+                        <li><p class="lead">SM2是国密椭圆曲线公钥密码标准，其中包含数字签名、公钥加密和密钥交换三个具体方案，以及一个256比特素域上的推荐椭圆曲线参数。GmSSL内置了SM2的推荐曲线参数，实现了SM2的签名算法和公钥加密算法。</p></li>
+                        <li><p class="lead">SM3是国密密码杂凑算法标准，输出的杂凑值长度为256比特。</p></li>
+                        <li><p class="lead">SM4是国密分组密码标准，又名SMS4，其分组长度和密钥长度均为128比特。GmSSL实现了SMS4密码及SMS4的ECB、CBC、CFB、OFB等工作模式。</p></li>
+                        <li><p class="lead">X9.63 KDF是密钥派生函数国际标准之一，ECIES和SM2公钥加密方案依赖该算法，GmSSL实现了X9.63 KDF，并用于支持ECIES和SM2公钥加密。</p></li>
+                         <li><p class="lead">ECIES (Elliptic Curve Integrated Encryption Scheme)是椭圆曲线公钥加密的国际标准，可用于加密数据。</p></li>
+                         <li><p class="lead">CPK是由南相浩和陈钟设计的基于身份的密码。GmSSL实现了CPK的系统建立和密钥生成算法，生成的密钥可以用于DSA、ECDH、ECDSA、ECIES、SM2等公钥密码算法。</p></li>
+                         <li><p class="lead">ZUC(祖冲之算法)是由我国设计的序列密码，以32位字为单位输出密钥流，其密钥长度和IV长度均为128比特。GmSSL的ZUC算法处于开发中。</p></li>
+                    </ul>
+                    </div>
 
-<p>GmSSL的<code>libcrypto</code>密码库增加的密码算法包括：</p>
-
-<ul>
-<li>SM2是国密椭圆曲线公钥密码标准，其中包含数字签名、公钥加密和密钥交换三个具体方案，以及一个256比特素域上的推荐椭圆曲线参数。GmSSL内置了SM2的推荐曲线参数，实现了SM2的签名算法和公钥加密算法。</li>
-<li>SM3是国密密码杂凑算法标准，输出的杂凑值长度为256比特。</li>
-<li>SM4是国密分组密码标准，又名SMS4，其分组长度和密钥长度均为128比特。GmSSL实现了SMS4密码及SMS4的ECB、CBC、CFB、OFB等工作模式。</li>
-<li>X9.63 KDF是密钥派生函数国际标准之一，ECIES和SM2公钥加密方案依赖该算法，GmSSL实现了X9.63 KDF，并用于支持ECIES和SM2公钥加密。</li>
-<li>ECIES (Elliptic Curve Integrated Encryption Scheme)是椭圆曲线公钥加密的国际标准，可用于加密数据。</li>
-<li>CPK是由南相浩和陈钟设计的基于身份的密码。GmSSL实现了CPK的系统建立和密钥生成算法，生成的密钥可以用于DSA、ECDH、ECDSA、ECIES、SM2等公钥密码算法。</li>
-<li>ZUC(祖冲之算法)是由我国设计的序列密码，以32位字为单位输出密钥流，其密钥长度和IV长度均为128比特。GmSSL的ZUC算法处于开发中。</li>
-</ul>
-
-<p>GmSSL提供命令行工具<code>gmssl</code>，可用于生成SM2签名、SM3摘要、HMAC-SM3消息认证码，支持SM4和ZUC数据加解密。</p>
-
-<div class="highlight highlight-source-shell"><pre>$ <span class="pl-c1">echo</span> -n abc <span class="pl-k">|</span> gmssl dgst -sm3
+                </div>
+                <div class="bs-docs-section">
+                    <h1 id="tool" class="page-header">命令行工具</h1>
+                    <h3>GmSSL提供命令行工具<code>gmssl</code>，可用于生成SM2签名、SM3摘要、HMAC-SM3消息认证码，支持SM4和ZUC数据加解密。</h3>
+                    <p>显示SM3摘要</p>
+                    <div class="highlight highlight-source-shell"><pre>$ <span class="pl-c1">echo</span> -n abc <span class="pl-k">|</span> gmssl dgst -sm3
 66c7f0f462eeedd9d1f2d46bdc10e4e24167c4875cf2f7a2297da02b8f4ba8e0</pre></div>
 
 <p>显示SM2推荐椭圆曲线域参数</p>
@@ -50,16 +121,81 @@
 <pre><code>$ gmssl x509 -text -noout -in certs/sm2/sm2-x509.pem
 $ gmssl pkcs7 -print_certs -in certs/sm2/sm2-pkcs7.pem
 </code></pre>
+                </div>
+                <div class="bs-docs-section">
+                    <h1 id="example" class="page-header">新增的EVP对象</h1>
+                    <p>GmSSL新增的EVP对象包括<code>EVP_sm3()</code>、<code>EVP_sm4_ecb()</code>、<code>EVP_sm4_cbc()</code>、<code>EVP_sm4_ofb()</code>、<code>EVP_sm4_cfb()</code>和<code>EVP_zuc()</code>。</p>
+                </div>
+                
+            </div>
+                
+        <div class="col-md-3" role="complementary" style="positiqon:fixed;top:0px;left:0px">
+          <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm">
+            <ul class="nav bs-docs-sidenav">
+              
+                <li>
+                    <a href="#advantages">特点</a>
+                </li>
+                <li>
+                    <a href="#download">下载</a>
+                </li>
+                <li>
+                    <a href="#configure">配置</a>
+                </li>
+                <li>
+                    <a href="#support">支持算法</a>
+                </li>
+                <li >
+                    <a href="#tool">命令行工具</a>
+                </li>
+               
 
-<p>GmSSL新增的EVP对象包括<code>EVP_sm3()</code>、<code>EVP_sm4_ecb()</code>、<code>EVP_sm4_cbc()</code>、<code>EVP_sm4_ofb()</code>、<code>EVP_sm4_cfb()</code>和<code>EVP_zuc()</code>。</p>
+              
+            </ul>
+            <a class="back-to-top" href="#top">
+              返回顶部
+            </a>
+            
+          </nav>
+        </div>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+        </div>
+      </div>
 
-      <footer class="site-footer">
-        <span class="site-footer-owner"><a href="https://github.com/guanzhi/GmSSL">GmSSL</a> is maintained by <a href="https://github.com/guanzhi">guanzhi</a>.</span>
+<footer class="bs-docs-footer" role="contentinfo">
+  
+     <div class="row featured ">
+         
+         <div class="text-center">
+    
+   
+      <div class="text-center text-conter">
+                    <img src="img/logo2.png" class="img-circle" height="10%" width="10%">
+                </div> 
 
-        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
-      </footer>
+    <span class="site-footer-owner"><a href="https://github.com/guanzhi/GmSSL">GmSSL</a> is maintained by <a href="https://github.com/guanzhi">guanzhi</a>.</span>
 
-    </section>
+      <p>This page is developed by <a href="http://infosec.pku.edu.cn/" alt="infosec">Information Security Lab. Peking University</a> .</p>
+    
+ 
+         </div>
+         
+    </div>
+</footer>
+
+      
 
   
   </body>
