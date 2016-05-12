@@ -1,3 +1,3 @@
 # GmSSL Homepage
 
-This is the homepage of GmSSL, at http://gmssl.org
+this is the homepage of GmSSL, at http://gmssl.org
